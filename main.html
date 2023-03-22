@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>To-Do List</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">User's Name: <span id="userNav"></span></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link btn" onclick="exit()">Home</a>
+                </li>
+                <li class=" nav-item active">
+                    <a class="nav-link" href="main.html">To-do</a>
+                </li>
+                <li class="nav-item">
+                    <a id="exitNav" class="nav-link btn btn-danger" onclick="exit()">Exit</a>
+
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <h3 class="text-center">Hi, <span id="userPage"></span>! </h3>
+        <h5 class="text-center">You can Add, Edit and Delete your To-do List</h5>
+        <div class="form-group">
+            <label class="mb-2" for="item">
+                <b>Add To-Do:</b>
+            </label>
+            <input type="text" class="form-control mb-3" id="item" placeholder="Add To-Do. Ex. Wash Clothes">
+            <button type="button" class="btn btn-block btn-dark mt-2" onclick="addItem()">Add</button>
+
+        </div>
+        <ul class="list-group" id="list">
+        </ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

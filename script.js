@@ -1,4 +1,8 @@
 var list = [];
+var name = localStorage.getItem("name");
+document.getElementById("userNav").innerHTML = name;
+document.getElementById("userPage").innerHTML = name;
+
 function proceed() {
   var name = document.getElementById("name").value;
   if (name != "") {
@@ -8,10 +12,6 @@ function proceed() {
     alert("Please enter your name.");
   }
 }
-
-var name = localStorage.getItem("name");
-document.getElementById("userNav").innerHTML = name;
-document.getElementById("userPage").innerHTML = name;
 
 function addItem() {
   var item = document.getElementById("item").value;
@@ -48,12 +48,39 @@ function displayList() {
 }
 
 function editItem(index) {
-  var newItem = prompt("Please Enter a New Value to Edit:");
-  if (newItem != null) {
-    list[index] = newItem;
-    displayList();
-    localStorage.setItem("list", JSON.stringify(list));
-  }
+  var modal = document.getElementById("myModal");
+  var newItemInput = document.getElementById("newItemInput");
+  var mainPage = document.getElementById("mainPage");
+  var modalClose = document.getElementById("modalClose");
+
+  mainPage.classList.add("hidden");
+
+  newItemInput.value = list[index];
+
+  modal.style.display = "block";
+
+  modalClose.onclick = function () {
+    modal.style.display = "none";
+    mainPage.classList.remove("hidden");
+  };
+
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+      mainPage.classList.remove("hidden");
+    }
+  };
+
+  saveNewItem = function () {
+    var newItem = newItemInput.value;
+    if (newItem != null && newItem != "") {
+      list[index] = newItem;
+      displayList();
+      localStorage.setItem("list", JSON.stringify(list));
+      modal.style.display = "none";
+      mainPage.classList.remove("hidden");
+    }
+  };
 }
 
 function deleteItem(index) {

@@ -15,6 +15,7 @@
 </head>
 
 <body>
+    <!-- Nav Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#">To-Do List</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -32,7 +33,10 @@
             </ul>
         </div>
     </nav>
+
+    <!-- Landing Page -->
     <div class=" container mt-5">
+
         <div id="landing-page">
             <h1 class="text-center">Welcome to your To-Do List!</h1>
             <form>
@@ -44,19 +48,15 @@
             </form>
         </div>
     </div>
-    <div id="main-page" style="display: none;">
-        <div class="container mt-5">
-            <h1>Hi, <span id="user"></span>! Here's your To-Do List.</h1>
-            <div class="form-group">
-                <label for="item">Add an item:</label>
-                <input type="text" class="form-control" id="item" placeholder="Enter item">
-                <button type="button" class="btn btn-block btn-primary mt-2" onclick="addItem()">Add</button>
-            </div>
-            <ul class="list-group" id="list">
-            </ul>
 
+    <!-- footer -->
+    <footer class="bg-dark text-light py-3 mt-5">
+        <div class="container text-center">
+            <p> Bayan Academy | Final Project | Copyright &copy; 2023 | Edrian Sawali</p>
         </div>
-    </div>
+    </footer>
+
+
     <script src="script.js"></script>
 </body>
 

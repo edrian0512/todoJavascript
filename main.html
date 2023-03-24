@@ -68,7 +68,13 @@
             </label>
             <input type="text" class="form-control mb-3" id="item" placeholder="Add To-Do. Ex. Wash Clothes">
             <button type="button" class="btn btn-block btn-dark mt-2" onclick="addItem()">Add</button>
-
+        </div>
+        <div>
+            <select class="btn btn-dark toggle-btn mb-3" id="filterSelect" onchange="filterList()">
+                <option value="all">All</option>
+                <option value="completed">Completed</option>
+                <option value="uncompleted">Uncompleted</option>
+            </select>
         </div>
         <ul class="list-group" id="list">
         </ul>

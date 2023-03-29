@@ -78,7 +78,7 @@ function displayList() {
   var html = "";
   for (var i = 0; i < list.length; i++) {
     html +=
-      "<li class='list-group-item mb-2 shadow-lg' style='max-width: 100%; word-wrap: break-word;'>" +
+      "<li class='list-group-item mb-2 shadow-lg'>" +
       "<span class='todo-item'>" +
       list[i] +
       "</span>" +
@@ -129,7 +129,7 @@ function displayFilteredList(filteredList) {
   var html = "";
   for (var i = 0; i < filteredList.length; i++) {
     html +=
-      "<li class='list-group-item mb-2 shadow-lg' style='max-width: 100%; word-wrap: break-word;'>" +
+      "<li class='list-group-item mb-2 shadow-lg'>" +
       "<span class='todo-item'>" +
       filteredList[i] +
       "</span>" +
